@@ -6,6 +6,8 @@ env:
   IMAGE_NAME: danielkrokovsky/catalog-service
   VERSION: latest 
 
+
+
 jobs:
   build:
     name: Build and Test
