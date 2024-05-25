@@ -51,6 +51,7 @@ dependencyManagement {
 
 bootRun {
 	systemProperty 'spring.profiles.active', 'testdata'
+<<<<<<< HEAD
 }
 
 bootBuildImage {
@@ -63,6 +64,8 @@ bootBuildImage {
 			url = project.findProperty("registryUrl")
 		}
 	}
+=======
+>>>>>>> 4d59408886bf1eac1ea8b575f7198b864b9c8845
 }
 
 tasks.named('test') {
