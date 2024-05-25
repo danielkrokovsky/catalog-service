@@ -68,9 +68,8 @@ jobs:
       - name: Build container image
         run: |
           cd ${{ matrix.project }}
-          chmod +x gradlew
-          ./gradlew bootBuildImage \
-            --imageName ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
+          chmod +x gradlew 
+          ./gradlew bootBuildImage --imageName ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
       - name: OCI image vulnerability scanning
         uses: anchore/scan-action@v3
         id: scan
