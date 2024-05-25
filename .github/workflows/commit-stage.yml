@@ -56,6 +56,12 @@ jobs:
       contents: read
       packages: write
       security-events: write
+    strategy:
+      fail-fast: false
+      matrix:
+        project: [
+          catalog-service
+        ]
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4
