@@ -32,7 +32,6 @@ jobs:
           cache: gradle
       - name: Build, unit tests and integration tests
         run: |
-          cd ${{ matrix.project }}
           chmod +x gradlew
           ./gradlew build
       - name: Code vulnerability scanning
@@ -73,7 +72,6 @@ jobs:
           cache: gradle
       - name: Build container image
         run: |
-          cd ${{ matrix.project }}
           chmod +x gradlew 
           ./gradlew bootBuildImage --imageName ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
       - name: OCI image vulnerability scanning
